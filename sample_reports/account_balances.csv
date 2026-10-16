@@ -1,0 +1,37 @@
+﻿account,category,normal_balance_side,total_debits,total_credits,closing_balance
+Cash,Asset,Debit,241160.00,43880.00,197280.00
+Bank - SBI,Asset,Debit,759800.00,615536.00,144264.00
+Bank - HDFC,Asset,Debit,476500.00,410898.00,65602.00
+Accounts Receivable,Asset,Debit,286740.00,280000.00,6740.00
+Inventory,Asset,Debit,380000.00,294000.00,86000.00
+Prepaid Insurance,Asset,Debit,24000.00,8000.00,16000.00
+GST Input Credit,Asset,Debit,104364.00,0.00,104364.00
+Loans Given,Asset,Debit,25000.00,0.00,25000.00
+Furniture & Fixtures,Fixed Asset,Debit,60000.00,0.00,60000.00
+Computer Equipment,Fixed Asset,Debit,90000.00,0.00,90000.00
+Delivery Vehicle,Fixed Asset,Debit,180000.00,0.00,180000.00
+Accumulated Depreciation - Furniture,Contra Asset,Credit,0.00,12000.00,12000.00
+Accumulated Depreciation - Computers,Contra Asset,Credit,0.00,30000.00,30000.00
+Accumulated Depreciation - Vehicle,Contra Asset,Credit,0.00,36000.00,36000.00
+Accounts Payable,Liability,Credit,265000.00,330400.00,65400.00
+Salaries Payable,Liability,Credit,45000.00,60000.00,15000.00
+GST Output Payable,Liability,Credit,0.00,115200.00,115200.00
+Bank Loan Payable,Liability,Credit,50000.00,200000.00,150000.00
+Owner's Capital,Equity,Credit,0.00,500000.00,500000.00
+Product Sales,Income,Credit,0.00,490000.00,490000.00
+Service Revenue,Income,Credit,0.00,150000.00,150000.00
+Interest Income,Income,Credit,0.00,2000.00,2000.00
+Other Income,Income,Credit,0.00,2000.00,2000.00
+Cost of Goods Sold,Expense,Debit,294000.00,0.00,294000.00
+Salaries Expense,Expense,Debit,143000.00,0.00,143000.00
+Rent Expense,Expense,Debit,15000.00,0.00,15000.00
+Utilities Expense,Expense,Debit,9200.00,0.00,9200.00
+Internet Expense,Expense,Debit,5800.00,0.00,5800.00
+Advertising Expense,Expense,Debit,19000.00,0.00,19000.00
+Insurance Expense,Expense,Debit,8000.00,0.00,8000.00
+Depreciation Expense,Expense,Debit,78000.00,0.00,78000.00
+Delivery Expense,Expense,Debit,2500.00,0.00,2500.00
+Repairs & Maintenance Expense,Expense,Debit,5300.00,0.00,5300.00
+Bank Charges Expense,Expense,Debit,650.00,0.00,650.00
+Interest Expense,Expense,Debit,3900.00,0.00,3900.00
+Office Supplies Expense,Expense,Debit,8000.00,0.00,8000.00

@@ -1,0 +1,19 @@
+﻿check,status,details
+At least 50 transactions,PASS,75 transaction(s) found; assignment minimum is 50.
+Journal entries balance,PASS,"Debits ₹3,579,914.00; credits ₹3,579,914.00."
+Trial Balance balances,PASS,Difference: ₹0.00.
+Balance Sheet balances,PASS,"Assets ₹897,250.00; liabilities + equity ₹897,250.00; difference ₹0.00."
+Every chart account has activity,PASS,36 of 36 chart account(s) used.
+Cash account,PASS,Account name should identify cash on hand.
+At least two bank accounts,PASS,2 bank account(s) identified.
+At least three fixed assets,PASS,3 fixed/non-current asset account(s) identified.
+Depreciation recorded,PASS,Looks for a depreciation expense and an accumulated depreciation/contra-asset account.
+Prepaid expense,PASS,Looks for an account with 'prepaid' in its name.
+Payable,PASS,4 payable account(s) identified.
+Salaries,PASS,Looks for a salary/salaries account.
+Receivables,PASS,Looks for an account with 'receivable' in its name.
+Loans given and availed,PASS,Looks for a loan asset and a loan liability.
+Inventory,PASS,Looks for an inventory account.
+GST input credit,PASS,Looks for GST Input Credit or a similarly named account.
+At least three income types,PASS,4 account(s) classified as Income.
+At least five expense types,PASS,13 account(s) classified as Expense.

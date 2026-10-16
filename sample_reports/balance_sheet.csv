@@ -1,0 +1,24 @@
+﻿section,account,amount
+Current assets,Cash,197280.00
+Current assets,Bank - SBI,144264.00
+Current assets,Bank - HDFC,65602.00
+Current assets,Accounts Receivable,6740.00
+Current assets,Inventory,86000.00
+Current assets,Prepaid Insurance,16000.00
+Current assets,GST Input Credit,104364.00
+Current assets,Loans Given,25000.00
+Fixed assets,Furniture & Fixtures,60000.00
+Fixed assets,Computer Equipment,90000.00
+Fixed assets,Delivery Vehicle,180000.00
+Less: accumulated depreciation / contra assets,Accumulated Depreciation - Furniture,-12000.00
+Less: accumulated depreciation / contra assets,Accumulated Depreciation - Computers,-30000.00
+Less: accumulated depreciation / contra assets,Accumulated Depreciation - Vehicle,-36000.00
+Total assets,,897250.00
+Liabilities,Accounts Payable,65400.00
+Liabilities,Salaries Payable,15000.00
+Liabilities,GST Output Payable,115200.00
+Liabilities,Bank Loan Payable,150000.00
+Equity,Owner's Capital,500000.00
+Current-period profit / (loss),,51650.00
+Total liabilities and equity,,897250.00
+Balance Sheet difference,,0.00

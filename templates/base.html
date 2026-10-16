@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d2a">
+  <title>{% block title %}LedgerLab{% endblock %} · LedgerLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="{{ url_for('dashboard') }}" class="brand">
+        <span class="brand-icon">L<span>.</span></span>
+        <span><strong>LedgerLab</strong><small>ACCOUNTING WORKSPACE</small></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="main-nav">
+        <a class="nav-link {% if current_endpoint == 'dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}"><span class="nav-icon">◫</span> Overview</a>
+        <a class="nav-link {% if current_endpoint == 'transactions' %}active{% endif %}" href="{{ url_for('transactions') }}"><span class="nav-icon">≡</span> Journal entries</a>
+        <a class="nav-link {% if current_endpoint == 'upload' %}active{% endif %}" href="{{ url_for('upload') }}"><span class="nav-icon">↑</span> Import data</a>
+        <a class="nav-link {% if current_endpoint == 'accounts' %}active{% endif %}" href="{{ url_for('accounts') }}"><span class="nav-icon">▦</span> Chart of accounts</a>
+      </nav>
+      <div class="sidebar-label reports-label">FINANCIAL REPORTS</div>
+      <nav class="main-nav">
+        <a class="nav-link {% if current_endpoint == 'trial_balance_report' %}active{% endif %}" href="{{ url_for('trial_balance_report') }}"><span class="nav-icon">⊞</span> Trial Balance</a>
+        <a class="nav-link {% if current_endpoint == 'profit_and_loss_report' %}active{% endif %}" href="{{ url_for('profit_and_loss_report') }}"><span class="nav-icon">⌁</span> Profit &amp; Loss</a>
+        <a class="nav-link {% if current_endpoint == 'balance_sheet_report' %}active{% endif %}" href="{{ url_for('balance_sheet_report') }}"><span class="nav-icon">▤</span> Balance Sheet</a>
+        <a class="nav-link {% if current_endpoint == 'audit' %}active{% endif %}" href="{{ url_for('audit') }}"><span class="nav-icon">✓</span> Audit &amp; checks</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="note-dot"></span><span><b>Demo workspace</b><small>Academic accounting project</small></span></div>
+        <a href="{{ url_for('export_report', report_name='all.zip') }}" class="sidebar-export">⇩ Download all reports</a>
+        <form action="{{ url_for('reset_demo') }}" method="post" class="reset-form" data-confirm="Restore the original demo data? Your current session edits will be replaced.">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button class="reset-button" type="submit">↺ Restore demo dataset</button>
+        </form>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="crumb">Accounting <span>/</span> <b>{% block crumb %}Overview{% endblock %}</b></div>
+        <div class="topbar-right"><span class="live-pill"><i></i> Local workspace</span><div class="avatar">LL</div></div>
+      </header>
+      <div class="page-content">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}<div class="flash-stack">{% for category, message in messages %}<div class="flash flash-{{ category }}"><span>{{ '✓' if category == 'success' else '!' }}</span><div>{{ message|e|replace('\n', '<br>')|safe }}</div><button type="button" aria-label="Dismiss" class="flash-close">×</button></div>{% endfor %}</div>{% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+        <footer class="page-footer"><span>LedgerLab · Accounting software project</span><span>Educational use only · Verify assumptions before relying on reports</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

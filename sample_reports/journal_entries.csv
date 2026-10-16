@@ -1,0 +1,211 @@
+﻿date,entry_id,description,account,debit,credit
+2025-04-01,JE001,Owner introduces start-up funds,Bank - HDFC,150000.00,0.00
+2025-04-01,JE001,Owner introduces start-up funds,Bank - SBI,300000.00,0.00
+2025-04-01,JE001,Owner introduces start-up funds,Cash,50000.00,0.00
+2025-04-01,JE001,Owner introduces start-up funds,Owner's Capital,0.00,500000.00
+2025-04-02,JE002,Bank term loan received,Bank - SBI,200000.00,0.00
+2025-04-02,JE002,Bank term loan received,Bank Loan Payable,0.00,200000.00
+2025-04-03,JE003,Purchase furniture and fixtures with eligible input GST,Bank - SBI,0.00,70800.00
+2025-04-03,JE003,Purchase furniture and fixtures with eligible input GST,Furniture & Fixtures,60000.00,0.00
+2025-04-03,JE003,Purchase furniture and fixtures with eligible input GST,GST Input Credit,10800.00,0.00
+2025-04-04,JE004,Purchase computer equipment with eligible input GST,Bank - HDFC,0.00,106200.00
+2025-04-04,JE004,Purchase computer equipment with eligible input GST,Computer Equipment,90000.00,0.00
+2025-04-04,JE004,Purchase computer equipment with eligible input GST,GST Input Credit,16200.00,0.00
+2025-04-05,JE005,Purchase delivery vehicle,Bank - SBI,0.00,180000.00
+2025-04-05,JE005,Purchase delivery vehicle,Delivery Vehicle,180000.00,0.00
+2025-04-07,JE006,Purchase inventory on supplier credit,Accounts Payable,0.00,118000.00
+2025-04-07,JE006,Purchase inventory on supplier credit,GST Input Credit,18000.00,0.00
+2025-04-07,JE006,Purchase inventory on supplier credit,Inventory,100000.00,0.00
+2025-04-10,JE007,Part payment to inventory supplier,Accounts Payable,70000.00,0.00
+2025-04-10,JE007,Part payment to inventory supplier,Bank - SBI,0.00,70000.00
+2025-04-12,JE008,Short-term loan advanced to business partner,Bank - HDFC,0.00,25000.00
+2025-04-12,JE008,Short-term loan advanced to business partner,Loans Given,25000.00,0.00
+2025-04-15,JE009,Pay shop rent in cash,Cash,0.00,15000.00
+2025-04-15,JE009,Pay shop rent in cash,Rent Expense,15000.00,0.00
+2025-04-17,JE010,Buy office supplies in cash,Cash,0.00,5900.00
+2025-04-17,JE010,Buy office supplies in cash,GST Input Credit,900.00,0.00
+2025-04-17,JE010,Buy office supplies in cash,Office Supplies Expense,5000.00,0.00
+2025-04-20,JE011,Cash product sale; record cost of inventory sold,Cash,59000.00,0.00
+2025-04-20,JE011,Cash product sale; record cost of inventory sold,Cost of Goods Sold,30000.00,0.00
+2025-04-20,JE011,Cash product sale; record cost of inventory sold,GST Output Payable,0.00,9000.00
+2025-04-20,JE011,Cash product sale; record cost of inventory sold,Inventory,0.00,30000.00
+2025-04-20,JE011,Cash product sale; record cost of inventory sold,Product Sales,0.00,50000.00
+2025-04-25,JE012,Credit product sale; record cost of inventory sold,Accounts Receivable,88500.00,0.00
+2025-04-25,JE012,Credit product sale; record cost of inventory sold,Cost of Goods Sold,45000.00,0.00
+2025-04-25,JE012,Credit product sale; record cost of inventory sold,GST Output Payable,0.00,13500.00
+2025-04-25,JE012,Credit product sale; record cost of inventory sold,Inventory,0.00,45000.00
+2025-04-25,JE012,Credit product sale; record cost of inventory sold,Product Sales,0.00,75000.00
+2025-04-28,JE013,Receive part payment from customer,Accounts Receivable,0.00,40000.00
+2025-04-28,JE013,Receive part payment from customer,Bank - SBI,40000.00,0.00
+2025-05-02,JE014,Purchase inventory paid from HDFC bank,Bank - HDFC,0.00,53100.00
+2025-05-02,JE014,Purchase inventory paid from HDFC bank,GST Input Credit,8100.00,0.00
+2025-05-02,JE014,Purchase inventory paid from HDFC bank,Inventory,45000.00,0.00
+2025-05-05,JE015,Product sale received in HDFC bank,Bank - HDFC,70800.00,0.00
+2025-05-05,JE015,Product sale received in HDFC bank,Cost of Goods Sold,36000.00,0.00
+2025-05-05,JE015,Product sale received in HDFC bank,GST Output Payable,0.00,10800.00
+2025-05-05,JE015,Product sale received in HDFC bank,Inventory,0.00,36000.00
+2025-05-05,JE015,Product sale received in HDFC bank,Product Sales,0.00,60000.00
+2025-05-10,JE016,Provide services on credit,Accounts Receivable,35400.00,0.00
+2025-05-10,JE016,Provide services on credit,GST Output Payable,0.00,5400.00
+2025-05-10,JE016,Provide services on credit,Service Revenue,0.00,30000.00
+2025-05-15,JE017,Collect customer receivable in HDFC bank,Accounts Receivable,0.00,50000.00
+2025-05-15,JE017,Collect customer receivable in HDFC bank,Bank - HDFC,50000.00,0.00
+2025-05-28,JE018,Pay staff salaries,Bank - SBI,0.00,28000.00
+2025-05-28,JE018,Pay staff salaries,Salaries Expense,28000.00,0.00
+2025-06-02,JE019,Pay electricity and water bill,Bank - SBI,0.00,4720.00
+2025-06-02,JE019,Pay electricity and water bill,GST Input Credit,720.00,0.00
+2025-06-02,JE019,Pay electricity and water bill,Utilities Expense,4000.00,0.00
+2025-06-05,JE020,Pay internet bill,Bank - HDFC,0.00,2124.00
+2025-06-05,JE020,Pay internet bill,GST Input Credit,324.00,0.00
+2025-06-05,JE020,Pay internet bill,Internet Expense,1800.00,0.00
+2025-06-08,JE021,Run advertising campaign,Advertising Expense,6000.00,0.00
+2025-06-08,JE021,Run advertising campaign,Bank - SBI,0.00,7080.00
+2025-06-08,JE021,Run advertising campaign,GST Input Credit,1080.00,0.00
+2025-06-12,JE022,Cash product sale; record cost of inventory sold,Cash,47200.00,0.00
+2025-06-12,JE022,Cash product sale; record cost of inventory sold,Cost of Goods Sold,24000.00,0.00
+2025-06-12,JE022,Cash product sale; record cost of inventory sold,GST Output Payable,0.00,7200.00
+2025-06-12,JE022,Cash product sale; record cost of inventory sold,Inventory,0.00,24000.00
+2025-06-12,JE022,Cash product sale; record cost of inventory sold,Product Sales,0.00,40000.00
+2025-06-18,JE023,Pay local delivery charges in cash,Cash,0.00,2950.00
+2025-06-18,JE023,Pay local delivery charges in cash,Delivery Expense,2500.00,0.00
+2025-06-18,JE023,Pay local delivery charges in cash,GST Input Credit,450.00,0.00
+2025-06-20,JE024,Buy additional inventory on supplier credit,Accounts Payable,0.00,94400.00
+2025-06-20,JE024,Buy additional inventory on supplier credit,GST Input Credit,14400.00,0.00
+2025-06-20,JE024,Buy additional inventory on supplier credit,Inventory,80000.00,0.00
+2025-06-25,JE025,Pay supplier against outstanding balance,Accounts Payable,75000.00,0.00
+2025-06-25,JE025,Pay supplier against outstanding balance,Bank - HDFC,0.00,75000.00
+2025-07-02,JE026,Product sale received in HDFC bank,Bank - HDFC,106200.00,0.00
+2025-07-02,JE026,Product sale received in HDFC bank,Cost of Goods Sold,54000.00,0.00
+2025-07-02,JE026,Product sale received in HDFC bank,GST Output Payable,0.00,16200.00
+2025-07-02,JE026,Product sale received in HDFC bank,Inventory,0.00,54000.00
+2025-07-02,JE026,Product sale received in HDFC bank,Product Sales,0.00,90000.00
+2025-07-06,JE027,Interest credited by bank,Bank - HDFC,1200.00,0.00
+2025-07-06,JE027,Interest credited by bank,Interest Income,0.00,1200.00
+2025-07-10,JE028,Cash service revenue earned,Cash,25960.00,0.00
+2025-07-10,JE028,Cash service revenue earned,GST Output Payable,0.00,3960.00
+2025-07-10,JE028,Cash service revenue earned,Service Revenue,0.00,22000.00
+2025-07-25,JE029,Accrue unpaid staff salaries,Salaries Expense,32000.00,0.00
+2025-07-25,JE029,Accrue unpaid staff salaries,Salaries Payable,0.00,32000.00
+2025-08-01,JE030,Pay part of salaries payable,Bank - SBI,0.00,20000.00
+2025-08-01,JE030,Pay part of salaries payable,Salaries Payable,20000.00,0.00
+2025-08-05,JE031,Repair office equipment,Cash,0.00,4130.00
+2025-08-05,JE031,Repair office equipment,GST Input Credit,630.00,0.00
+2025-08-05,JE031,Repair office equipment,Repairs & Maintenance Expense,3500.00,0.00
+2025-08-15,JE032,Repay loan principal and pay interest,Bank - SBI,0.00,22500.00
+2025-08-15,JE032,Repay loan principal and pay interest,Bank Loan Payable,20000.00,0.00
+2025-08-15,JE032,Repay loan principal and pay interest,Interest Expense,2500.00,0.00
+2025-08-20,JE033,Credit product sale; record cost of inventory sold,Accounts Receivable,76700.00,0.00
+2025-08-20,JE033,Credit product sale; record cost of inventory sold,Cost of Goods Sold,39000.00,0.00
+2025-08-20,JE033,Credit product sale; record cost of inventory sold,GST Output Payable,0.00,11700.00
+2025-08-20,JE033,Credit product sale; record cost of inventory sold,Inventory,0.00,39000.00
+2025-08-20,JE033,Credit product sale; record cost of inventory sold,Product Sales,0.00,65000.00
+2025-08-28,JE034,Receive customer payment in SBI bank,Accounts Receivable,0.00,60000.00
+2025-08-28,JE034,Receive customer payment in SBI bank,Bank - SBI,60000.00,0.00
+2025-09-02,JE035,Purchase stock paid from SBI bank,Bank - SBI,0.00,64900.00
+2025-09-02,JE035,Purchase stock paid from SBI bank,GST Input Credit,9900.00,0.00
+2025-09-02,JE035,Purchase stock paid from SBI bank,Inventory,55000.00,0.00
+2025-09-10,JE036,Service revenue received in HDFC bank,Bank - HDFC,41300.00,0.00
+2025-09-10,JE036,Service revenue received in HDFC bank,GST Output Payable,0.00,6300.00
+2025-09-10,JE036,Service revenue received in HDFC bank,Service Revenue,0.00,35000.00
+2025-09-15,JE037,Monthly bank charges,Bank - HDFC,0.00,650.00
+2025-09-15,JE037,Monthly bank charges,Bank Charges Expense,650.00,0.00
+2025-09-20,JE038,Online advertising campaign,Advertising Expense,4500.00,0.00
+2025-09-20,JE038,Online advertising campaign,Bank - HDFC,0.00,5310.00
+2025-09-20,JE038,Online advertising campaign,GST Input Credit,810.00,0.00
+2025-10-01,JE039,Cash product sale; record cost of inventory sold,Cash,41300.00,0.00
+2025-10-01,JE039,Cash product sale; record cost of inventory sold,Cost of Goods Sold,21000.00,0.00
+2025-10-01,JE039,Cash product sale; record cost of inventory sold,GST Output Payable,0.00,6300.00
+2025-10-01,JE039,Cash product sale; record cost of inventory sold,Inventory,0.00,21000.00
+2025-10-01,JE039,Cash product sale; record cost of inventory sold,Product Sales,0.00,35000.00
+2025-10-10,JE040,Buy inventory on supplier credit,Accounts Payable,0.00,70800.00
+2025-10-10,JE040,Buy inventory on supplier credit,GST Input Credit,10800.00,0.00
+2025-10-10,JE040,Buy inventory on supplier credit,Inventory,60000.00,0.00
+2025-10-15,JE041,Pay supplier from HDFC bank,Accounts Payable,50000.00,0.00
+2025-10-15,JE041,Pay supplier from HDFC bank,Bank - HDFC,0.00,50000.00
+2025-10-20,JE042,Pay electricity and water bill,Bank - SBI,0.00,6136.00
+2025-10-20,JE042,Pay electricity and water bill,GST Input Credit,936.00,0.00
+2025-10-20,JE042,Pay electricity and water bill,Utilities Expense,5200.00,0.00
+2025-11-01,JE043,Pay internet bill,Bank - HDFC,0.00,2124.00
+2025-11-01,JE043,Pay internet bill,GST Input Credit,324.00,0.00
+2025-11-01,JE043,Pay internet bill,Internet Expense,1800.00,0.00
+2025-11-08,JE044,Product sale received in SBI bank,Bank - SBI,59000.00,0.00
+2025-11-08,JE044,Product sale received in SBI bank,Cost of Goods Sold,30000.00,0.00
+2025-11-08,JE044,Product sale received in SBI bank,GST Output Payable,0.00,9000.00
+2025-11-08,JE044,Product sale received in SBI bank,Inventory,0.00,30000.00
+2025-11-08,JE044,Product sale received in SBI bank,Product Sales,0.00,50000.00
+2025-11-15,JE045,Provide services on credit,Accounts Receivable,33040.00,0.00
+2025-11-15,JE045,Provide services on credit,GST Output Payable,0.00,5040.00
+2025-11-15,JE045,Provide services on credit,Service Revenue,0.00,28000.00
+2025-11-20,JE046,Collect customer receivable in SBI bank,Accounts Receivable,0.00,35000.00
+2025-11-20,JE046,Collect customer receivable in SBI bank,Bank - SBI,35000.00,0.00
+2025-12-01,JE047,Pay 12-month insurance premium in advance,Bank - HDFC,0.00,24000.00
+2025-12-01,JE047,Pay 12-month insurance premium in advance,Prepaid Insurance,24000.00,0.00
+2025-12-01,JE048,December advertising campaign,Advertising Expense,6500.00,0.00
+2025-12-01,JE048,December advertising campaign,Bank - HDFC,0.00,7670.00
+2025-12-01,JE048,December advertising campaign,GST Input Credit,1170.00,0.00
+2025-12-10,JE049,Pay staff salaries,Bank - HDFC,0.00,30000.00
+2025-12-10,JE049,Pay staff salaries,Salaries Expense,30000.00,0.00
+2025-12-15,JE050,Repay part of bank loan principal,Bank - SBI,0.00,20000.00
+2025-12-15,JE050,Repay part of bank loan principal,Bank Loan Payable,20000.00,0.00
+2026-01-15,JE051,Collect customer receivable in HDFC bank,Accounts Receivable,0.00,25000.00
+2026-01-15,JE051,Collect customer receivable in HDFC bank,Bank - HDFC,25000.00,0.00
+2026-01-20,JE052,Deposit cash into SBI bank,Bank - SBI,10000.00,0.00
+2026-01-20,JE052,Deposit cash into SBI bank,Cash,0.00,10000.00
+2026-01-22,JE053,Transfer funds from HDFC to SBI,Bank - HDFC,0.00,15000.00
+2026-01-22,JE053,Transfer funds from HDFC to SBI,Bank - SBI,15000.00,0.00
+2026-02-01,JE054,Pay supplier from SBI bank,Accounts Payable,45000.00,0.00
+2026-02-01,JE054,Pay supplier from SBI bank,Bank - SBI,0.00,45000.00
+2026-02-05,JE055,Cash service revenue earned,Cash,17700.00,0.00
+2026-02-05,JE055,Cash service revenue earned,GST Output Payable,0.00,2700.00
+2026-02-05,JE055,Cash service revenue earned,Service Revenue,0.00,15000.00
+2026-02-12,JE056,Pay part of accrued salaries,Bank - SBI,0.00,15000.00
+2026-02-12,JE056,Pay part of accrued salaries,Salaries Payable,15000.00,0.00
+2026-02-20,JE057,Bank cashback credited,Bank - HDFC,2000.00,0.00
+2026-02-20,JE057,Bank cashback credited,Other Income,0.00,2000.00
+2026-02-22,JE058,Buy additional office supplies in cash,Cash,0.00,3540.00
+2026-02-22,JE058,Buy additional office supplies in cash,GST Input Credit,540.00,0.00
+2026-02-22,JE058,Buy additional office supplies in cash,Office Supplies Expense,3000.00,0.00
+2026-02-24,JE059,Pay current-month salaries,Bank - SBI,0.00,25000.00
+2026-02-24,JE059,Pay current-month salaries,Salaries Expense,25000.00,0.00
+2026-02-25,JE060,Interest credited by SBI bank,Bank - SBI,800.00,0.00
+2026-02-25,JE060,Interest credited by SBI bank,Interest Income,0.00,800.00
+2026-02-26,JE061,Collect customer receivable in HDFC bank,Accounts Receivable,0.00,30000.00
+2026-02-26,JE061,Collect customer receivable in HDFC bank,Bank - HDFC,30000.00,0.00
+2026-03-01,JE062,Buy inventory on supplier credit,Accounts Payable,0.00,47200.00
+2026-03-01,JE062,Buy inventory on supplier credit,GST Input Credit,7200.00,0.00
+2026-03-01,JE062,Buy inventory on supplier credit,Inventory,40000.00,0.00
+2026-03-03,JE063,Pay part of supplier balance,Accounts Payable,25000.00,0.00
+2026-03-03,JE063,Pay part of supplier balance,Bank - SBI,0.00,25000.00
+2026-03-04,JE064,Pay monthly internet bill,Bank - HDFC,0.00,2596.00
+2026-03-04,JE064,Pay monthly internet bill,GST Input Credit,396.00,0.00
+2026-03-04,JE064,Pay monthly internet bill,Internet Expense,2200.00,0.00
+2026-03-06,JE065,Credit product sale; record cost of inventory sold,Accounts Receivable,29500.00,0.00
+2026-03-06,JE065,Credit product sale; record cost of inventory sold,Cost of Goods Sold,15000.00,0.00
+2026-03-06,JE065,Credit product sale; record cost of inventory sold,GST Output Payable,0.00,4500.00
+2026-03-06,JE065,Credit product sale; record cost of inventory sold,Inventory,0.00,15000.00
+2026-03-06,JE065,Credit product sale; record cost of inventory sold,Product Sales,0.00,25000.00
+2026-03-08,JE066,Receive customer payment in SBI bank,Accounts Receivable,0.00,40000.00
+2026-03-08,JE066,Receive customer payment in SBI bank,Bank - SBI,40000.00,0.00
+2026-03-10,JE067,Pay additional salaries payable,Bank - HDFC,0.00,10000.00
+2026-03-10,JE067,Pay additional salaries payable,Salaries Payable,10000.00,0.00
+2026-03-12,JE068,Provide additional services on credit,Accounts Receivable,23600.00,0.00
+2026-03-12,JE068,Provide additional services on credit,GST Output Payable,0.00,3600.00
+2026-03-12,JE068,Provide additional services on credit,Service Revenue,0.00,20000.00
+2026-03-14,JE069,Repair shop fittings,Bank - HDFC,0.00,2124.00
+2026-03-14,JE069,Repair shop fittings,GST Input Credit,324.00,0.00
+2026-03-14,JE069,Repair shop fittings,Repairs & Maintenance Expense,1800.00,0.00
+2026-03-16,JE070,Repay further bank loan principal,Bank - SBI,0.00,10000.00
+2026-03-16,JE070,Repay further bank loan principal,Bank Loan Payable,10000.00,0.00
+2026-03-17,JE071,Pay additional bank-loan interest,Bank - SBI,0.00,1400.00
+2026-03-17,JE071,Pay additional bank-loan interest,Interest Expense,1400.00,0.00
+2026-03-18,JE072,Small local advertising campaign,Advertising Expense,2000.00,0.00
+2026-03-18,JE072,Small local advertising campaign,Cash,0.00,2360.00
+2026-03-18,JE072,Small local advertising campaign,GST Input Credit,360.00,0.00
+2026-03-31,JE073,Record full-year straight-line depreciation,Accumulated Depreciation - Computers,0.00,30000.00
+2026-03-31,JE073,Record full-year straight-line depreciation,Accumulated Depreciation - Furniture,0.00,12000.00
+2026-03-31,JE073,Record full-year straight-line depreciation,Accumulated Depreciation - Vehicle,0.00,36000.00
+2026-03-31,JE073,Record full-year straight-line depreciation,Depreciation Expense,78000.00,0.00
+2026-03-31,JE074,Recognise four months of prepaid insurance used,Insurance Expense,8000.00,0.00
+2026-03-31,JE074,Recognise four months of prepaid insurance used,Prepaid Insurance,0.00,8000.00
+2026-03-31,JE075,Accrue unpaid salaries at year end,Salaries Expense,28000.00,0.00
+2026-03-31,JE075,Accrue unpaid salaries at year end,Salaries Payable,0.00,28000.00

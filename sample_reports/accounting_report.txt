@@ -1,0 +1,16 @@
+LedgerLab demo accounting report
+Business dataset: journal_entries.csv
+Reporting period covered by journal: 2025-04-01 to 2026-03-31
+Transactions: 75
+Journal lines: 210
+Journal debits: ₹3,579,914.00
+Journal credits: ₹3,579,914.00
+Total income: ₹644,000.00
+Total expenses: ₹592,350.00
+Net profit / (loss): ₹51,650.00
+Total assets: ₹897,250.00
+Total liabilities and equity: ₹897,250.00
+Balance Sheet difference: ₹0.00
+Checks passed: 18/18
+
+Audit checks are automated assignment checks, not a professional audit opinion.

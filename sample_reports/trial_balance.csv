@@ -1,0 +1,37 @@
+﻿account,category,total_debits,total_credits,debit_balance,credit_balance
+Cash,Asset,241160.00,43880.00,197280.00,0.00
+Bank - SBI,Asset,759800.00,615536.00,144264.00,0.00
+Bank - HDFC,Asset,476500.00,410898.00,65602.00,0.00
+Accounts Receivable,Asset,286740.00,280000.00,6740.00,0.00
+Inventory,Asset,380000.00,294000.00,86000.00,0.00
+Prepaid Insurance,Asset,24000.00,8000.00,16000.00,0.00
+GST Input Credit,Asset,104364.00,0.00,104364.00,0.00
+Loans Given,Asset,25000.00,0.00,25000.00,0.00
+Furniture & Fixtures,Fixed Asset,60000.00,0.00,60000.00,0.00
+Computer Equipment,Fixed Asset,90000.00,0.00,90000.00,0.00
+Delivery Vehicle,Fixed Asset,180000.00,0.00,180000.00,0.00
+Accumulated Depreciation - Furniture,Contra Asset,0.00,12000.00,0.00,12000.00
+Accumulated Depreciation - Computers,Contra Asset,0.00,30000.00,0.00,30000.00
+Accumulated Depreciation - Vehicle,Contra Asset,0.00,36000.00,0.00,36000.00
+Accounts Payable,Liability,265000.00,330400.00,0.00,65400.00
+Salaries Payable,Liability,45000.00,60000.00,0.00,15000.00
+GST Output Payable,Liability,0.00,115200.00,0.00,115200.00
+Bank Loan Payable,Liability,50000.00,200000.00,0.00,150000.00
+Owner's Capital,Equity,0.00,500000.00,0.00,500000.00
+Product Sales,Income,0.00,490000.00,0.00,490000.00
+Service Revenue,Income,0.00,150000.00,0.00,150000.00
+Interest Income,Income,0.00,2000.00,0.00,2000.00
+Other Income,Income,0.00,2000.00,0.00,2000.00
+Cost of Goods Sold,Expense,294000.00,0.00,294000.00,0.00
+Salaries Expense,Expense,143000.00,0.00,143000.00,0.00
+Rent Expense,Expense,15000.00,0.00,15000.00,0.00
+Utilities Expense,Expense,9200.00,0.00,9200.00,0.00
+Internet Expense,Expense,5800.00,0.00,5800.00,0.00
+Advertising Expense,Expense,19000.00,0.00,19000.00,0.00
+Insurance Expense,Expense,8000.00,0.00,8000.00,0.00
+Depreciation Expense,Expense,78000.00,0.00,78000.00,0.00
+Delivery Expense,Expense,2500.00,0.00,2500.00,0.00
+Repairs & Maintenance Expense,Expense,5300.00,0.00,5300.00,0.00
+Bank Charges Expense,Expense,650.00,0.00,650.00,0.00
+Interest Expense,Expense,3900.00,0.00,3900.00,0.00
+Office Supplies Expense,Expense,8000.00,0.00,8000.00,0.00

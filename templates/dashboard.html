@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Overview{% endblock %}
+{% block crumb %}Overview{% endblock %}
+{% block content %}
+<section class="page-heading heading-with-actions">
+  <div><div class="eyebrow">FINANCIAL OVERVIEW <span class="eyebrow-line"></span></div><h1>Good accounting starts with <em>clear numbers.</em></h1><p class="page-subtitle">A live view of your journal, business performance, and financial position.</p></div>
+  <div class="heading-actions"><a class="button button-secondary" href="{{ url_for('upload') }}">↑ Import CSV</a><a class="button button-primary" href="{{ url_for('transactions') }}">Manage transactions <span>↗</span></a></div>
+</section>
+<div class="dataset-strip"><div class="dataset-icon">▤</div><div class="dataset-text"><b>{{ ws.source_name }}</b><small>Reporting period in journal: {{ r.min_date }} — {{ r.max_date }} · Last updated {{ ws.updated_at }}</small></div><span class="dataset-badge {% if ws.is_demo %}badge-demo{% else %}badge-custom{% endif %}">{{ 'DEMO DATA' if ws.is_demo else 'CUSTOM DATA' }}</span><a href="{{ url_for('export_report', report_name='journal_entries.csv') }}" class="text-link">Download journal ↗</a></div>
+
+<section class="metric-grid">
+  <article class="metric-card metric-profit"><div class="metric-head"><span>Net profit / (loss)</span><span class="metric-icon">↗</span></div><div class="metric-value">{{ r.net_profit|money }}</div><div class="metric-foot"><span class="status-chip {% if r.net_profit >= 0 %}status-good{% else %}status-warn{% endif %}">{{ 'Profitable period' if r.net_profit >= 0 else 'Net loss' }}</span><span>Income less expenses</span></div></article>
+  <article class="metric-card"><div class="metric-head"><span>Total income</span><span class="metric-icon icon-green">↗</span></div><div class="metric-value">{{ r.total_income|money }}</div><div class="metric-foot"><span class="metric-foot-dot dot-green"></span><span>{{ r.income_rows|length }} income accounts</span></div></article>
+  <article class="metric-card"><div class="metric-head"><span>Total expenses</span><span class="metric-icon icon-amber">↘</span></div><div class="metric-value">{{ r.total_expenses|money }}</div><div class="metric-foot"><span class="metric-foot-dot dot-amber"></span><span>{{ r.expense_rows|length }} expense accounts</span></div></article>
+  <article class="metric-card"><div class="metric-head"><span>Total assets</span><span class="metric-icon icon-blue">▤</span></div><div class="metric-value">{{ r.total_assets|money }}</div><div class="metric-foot"><span class="metric-foot-dot dot-blue"></span><span>As at {{ r.max_date }}</span></div></article>
+</section>
+
+<section class="content-grid two-col">
+  <article class="panel chart-panel">
+    <div class="panel-heading"><div><h2>Income &amp; expenses</h2><p>Statement of performance for the uploaded journal period</p></div><span class="panel-tag">P&amp;L</span></div>
+    <div class="comparison-chart">
+      <div class="compare-row"><div class="compare-label"><span class="legend-square legend-income"></span>Income <b>{{ r.total_income|money }}</b></div><div class="bar-track"><div class="bar-fill bar-income" style="width: {{ (100 * (r.total_income|float) / ([r.total_income|float, r.total_expenses|float, 1]|max))|round(1) }}%"></div></div></div>
+      <div class="compare-row"><div class="compare-label"><span class="legend-square legend-expenses"></span>Expenses <b>{{ r.total_expenses|money }}</b></div><div class="bar-track"><div class="bar-fill bar-expenses" style="width: {{ (100 * (r.total_expenses|float) / ([r.total_income|float, r.total_expenses|float, 1]|max))|round(1) }}%"></div></div></div>
+      <div class="chart-summary"><div><small>Net margin</small><strong>{{ ((r.net_profit / r.total_income * 100) if r.total_income else 0)|round(1) }}%</strong></div><div><small>Transaction count</small><strong>{{ r.transaction_count }}</strong></div><div><small>Journal lines</small><strong>{{ r.line_count }}</strong></div></div>
+    </div>
+    <a class="panel-link" href="{{ url_for('export_report', report_name='profit_and_loss.csv') }}">View / download Profit &amp; Loss <span>↗</span></a>
+  </article>
+  <article class="panel balance-panel">
+    <div class="panel-heading"><div><h2>Balance Sheet check</h2><p>Assets must equal liabilities plus equity</p></div><span class="panel-tag">POSITION</span></div>
+    <div class="balance-equation"><div class="equation-box"><small>Total assets</small><strong>{{ r.total_assets|money }}</strong></div><div class="equation-operator">=</div><div class="equation-box"><small>Liabilities + equity</small><strong>{{ r.liabilities_and_equity|money }}</strong></div></div>
+    <div class="balance-status {% if (r.balance_sheet_difference|abs) < 0.01 %}balance-pass{% else %}balance-fail{% endif %}"><span class="balance-status-icon">{% if (r.balance_sheet_difference|abs) < 0.01 %}✓{% else %}!{% endif %}</span><div><strong>{% if (r.balance_sheet_difference|abs) < 0.01 %}Balance Sheet balances{% else %}Balance Sheet needs review{% endif %}</strong><small>Difference: {{ r.balance_sheet_difference|money }}</small></div><span class="status-word">{{ 'PASS' if (r.balance_sheet_difference|abs) < 0.01 else 'REVIEW' }}</span></div>
+    <a class="panel-link" href="{{ url_for('export_report', report_name='balance_sheet.csv') }}">View / download Balance Sheet <span>↗</span></a>
+  </article>
+</section>
+
+<section class="content-grid two-col lower-grid">
+  <article class="panel"><div class="panel-heading"><div><h2>Income breakdown</h2><p>Revenue by account</p></div><span class="tiny-count">{{ income_sorted|length }} ACCOUNTS</span></div><div class="breakdown-list">{% for item in income_sorted if item.amount != 0 %}<div class="breakdown-item"><div class="breakdown-title"><span>{{ item.account }}</span><b>{{ item.amount|money }}</b></div><div class="mini-track"><div class="mini-fill fill-green" style="width: {{ (100 * (item.amount|float / max_income))|round(1) }}%"></div></div></div>{% endfor %}{% if not income_sorted|selectattr('amount')|list %}<p class="empty-note">No income activity.</p>{% endif %}</div></article>
+  <article class="panel"><div class="panel-heading"><div><h2>Expense breakdown</h2><p>Spending by account</p></div><span class="tiny-count">{{ expense_sorted|length }} ACCOUNTS</span></div><div class="breakdown-list">{% for item in expense_sorted if item.amount != 0 %}<div class="breakdown-item"><div class="breakdown-title"><span>{{ item.account }}</span><b>{{ item.amount|money }}</b></div><div class="mini-track"><div class="mini-fill fill-amber" style="width: {{ (100 * (item.amount|float / max_expense))|round(1) }}%"></div></div></div>{% endfor %}<a class="panel-link" href="{{ url_for('profit_and_loss_report') }}">Open full report <span>↗</span></a></div></article>
+</section>
+
+<section class="panel audit-preview"><div class="panel-heading"><div><h2>Assignment readiness</h2><p>Quick checks against the project brief</p></div><a class="panel-link no-border" href="{{ url_for('audit') }}">All audit checks <span>↗</span></a></div><div class="audit-preview-grid">{% for check in checks[:6] %}<div class="check-mini"><span class="check-mark {% if check.passed %}check-pass{% else %}check-review{% endif %}">{{ '✓' if check.passed else '!' }}</span><div><b>{{ check.check }}</b><small>{{ check.details }}</small></div><span class="check-status {% if check.passed %}text-pass{% else %}text-review{% endif %}">{{ check.status }}</span></div>{% endfor %}</div></section>
+{% endblock %}

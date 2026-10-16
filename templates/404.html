@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block title %}Page not found{% endblock %}
+{% block crumb %}Not found{% endblock %}
+{% block content %}<section class="empty-state"><div class="empty-state-icon">404</div><h1>Nothing on this page.</h1><p>The page may have moved or the report name may be invalid.</p><a href="{{ url_for('dashboard') }}" class="button button-primary">Back to overview ↗</a></section>{% endblock %}

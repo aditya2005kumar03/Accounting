@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Journal entries{% endblock %}
+{% block crumb %}Journal entries{% endblock %}
+{% block content %}
+<section class="page-heading"><div class="eyebrow">GENERAL LEDGER <span class="eyebrow-line"></span></div><h1>Journal <em>entries.</em></h1><p class="page-subtitle">Review, edit, or add double-entry transactions. A transaction is saved only when debits equal credits.</p></section>
+<div class="toolbar-card"><div class="toolbar-stats"><div><small>Transactions</small><strong>{{ total_transactions }}</strong></div><div><small>Journal lines</small><strong>{{ total_lines }}</strong></div><div><small>Rows per page</small><strong>Up to 8 transactions</strong></div></div><div class="toolbar-buttons"><a class="button button-secondary" href="{{ url_for('export_report', report_name='journal_entries.csv') }}">⇩ Export CSV</a><a class="button button-primary" href="{{ url_for('upload') }}">↑ Upload replacement</a></div></div>
+<div class="notice notice-info"><span>i</span><div><b>Editing tip:</b> Use the transaction header to change the date, ID, or description for all lines in that entry. Edit account and debit/credit amounts line by line. Every transaction must remain balanced.</div></div>
+<form method="post" action="{{ url_for('transactions') }}?page={{ page }}" id="edit-form">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="save"><input type="hidden" name="page" value="{{ page }}">
+{% for group in groups %}{% set g_index = page_start + loop.index0 %}
+<article class="transaction-card">
+  <div class="transaction-top"><div class="transaction-number"><span>JE</span><div><small>TRANSACTION {{ g_index + 1 }} OF {{ total_transactions }}</small><h3>{{ group.entry_id }}</h3></div></div><div class="transaction-balance"><span class="tiny-balance">Balanced entry</span><span>{{ group.lines|length }} line(s)</span></div></div>
+  <div class="transaction-meta"><label>Date<input type="date" name="group_date_{{ g_index }}" value="{{ group.date }}" required></label><label>Entry ID<input type="text" name="group_entry_id_{{ g_index }}" value="{{ group.entry_id }}" required maxlength="80"></label><label class="description-field">Description<input type="text" name="group_description_{{ g_index }}" value="{{ group.description }}" required maxlength="250"></label></div>
+  <div class="table-wrap lines-table-wrap"><table class="data-table edit-table"><thead><tr><th>Account</th><th class="number-cell">Debit (₹)</th><th class="number-cell">Credit (₹)</th></tr></thead><tbody>
+  {% for line in group.lines %}<tr><td><select name="account_{{ line.index }}" required>{% for a in chart %}<option value="{{ a.account }}" {% if a.account == line.account %}selected{% endif %}>{{ a.account }}</option>{% endfor %}</select></td><td><input aria-label="Debit amount" class="amount-input" type="number" min="0" step="0.01" name="debit_{{ line.index }}" value="{{ line.debit }}" required></td><td><input aria-label="Credit amount" class="amount-input" type="number" min="0" step="0.01" name="credit_{{ line.index }}" value="{{ line.credit }}" required></td></tr>{% endfor %}
+  </tbody></table></div>
+</article>
+{% endfor %}
+<div class="form-footer"><div class="pagination">{% if page > 0 %}<a class="button button-tertiary" href="{{ url_for('transactions', page=page-1) }}">← Previous</a>{% else %}<span></span>{% endif %}<span>Page {{ page + 1 }} of {{ pages }}</span>{% if page + 1 < pages %}<a class="button button-tertiary" href="{{ url_for('transactions', page=page+1) }}">Next →</a>{% endif %}</div><button class="button button-primary button-large" type="submit">Save changes &amp; recalculate ↗</button></div>
+</form>
+<section class="panel add-entry-panel" id="add-entry"><div class="panel-heading"><div><h2>＋ Add a transaction</h2><p>For a simple transaction, enter the debit account, credit account, and amount. The app creates two journal lines.</p></div><span class="panel-tag">NEW ENTRY</span></div>
+<form method="post" action="{{ url_for('transactions') }}" class="add-entry-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="add">
+<label>Date<input type="date" name="new_date" value="{{ today_date }}" required></label><label>Entry ID <span class="field-hint">(optional)</span><input type="text" name="new_entry_id" placeholder="Auto-generated if blank"></label><label class="wide-label">Description<input type="text" name="new_description" placeholder="Describe the transaction" required maxlength="250"></label>
+<label>Debit account<select name="new_debit_account" required><option value="">Choose account…</option>{% for a in chart %}<option value="{{ a.account }}">{{ a.account }} · {{ a.category }}</option>{% endfor %}</select></label><label>Credit account<select name="new_credit_account" required><option value="">Choose account…</option>{% for a in chart %}<option value="{{ a.account }}">{{ a.account }} · {{ a.category }}</option>{% endfor %}</select></label><label>Amount (₹)<input type="number" name="new_amount" min="0.01" step="0.01" placeholder="0.00" required></label><div class="add-entry-submit"><button class="button button-primary" type="submit">Add transaction <span>＋</span></button></div>
+</form></section>
+<div class="notice notice-warn"><span>!</span><div><b>Important:</b> Adding transactions changes the current browser workspace only. Download the updated journal and reports to keep a copy. The sample CSV remains unchanged.</div></div>
+{% endblock %}

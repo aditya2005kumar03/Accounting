@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Chart of Accounts{% endblock %}
+{% block crumb %}Chart of Accounts{% endblock %}
+{% block content %}
+<section class="page-heading"><div class="eyebrow">ACCOUNT STRUCTURE <span class="eyebrow-line"></span></div><h1>Chart of <em>Accounts.</em></h1><p class="page-subtitle">Configure the accounts and classifications used by the financial statements. New accounts can be added without changing Python code.</p></section>
+<div class="content-grid accounts-layout">
+  <section class="panel"><div class="panel-heading"><div><h2>Account directory</h2><p>{{ ws.chart|length }} account(s) currently available</p></div><a class="button button-secondary button-compact" href="{{ url_for('export_report', report_name='chart_of_accounts.csv') }}">⇩ Export CSV</a></div>
+    <div class="table-wrap"><table class="data-table accounts-table"><thead><tr><th>Account name</th><th>Category</th><th>Normal balance</th><th>Journal activity</th></tr></thead><tbody>{% for a in ws.chart|sort(attribute='category') %}<tr><td><b>{{ a.account }}</b></td><td><span class="category-pill category-{{ a.category|lower|replace(' ','-') }}">{{ a.category }}</span></td><td>{{ a.normal_balance_side }}</td><td>{% if a.account in used %}<span class="activity-pill activity-yes">● Used</span>{% else %}<span class="activity-pill activity-no">○ No activity</span>{% endif %}</td></tr>{% endfor %}</tbody></table></div>
+  </section>
+  <aside class="panel add-account-panel"><div class="panel-heading"><div><h2>＋ Add an account</h2><p>Available immediately for future journal entries.</p></div></div>
+    <form method="post" action="{{ url_for('accounts') }}" class="stacked-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label>Account name<input type="text" name="account" placeholder="e.g. Office Equipment" required maxlength="100"></label><label>Financial statement category<select name="category" required><option value="">Select category…</option>{% for cat in categories %}<option value="{{ cat }}">{{ cat }}</option>{% endfor %}</select><small>Use Contra Asset for accumulated depreciation or other contra-assets.</small></label><label>Normal balance side<select name="normal_balance_side" required><option value="Debit">Debit</option><option value="Credit">Credit</option></select><small>Assets and expenses usually have debit balances; liabilities, equity, and income usually have credit balances.</small></label><button class="button button-primary" type="submit">Add account <span>＋</span></button></form>
+  </aside>
+</div>
+<div class="notice notice-info"><span>i</span><div><b>Important:</b> Adding a new account updates the current session's chart. It does not automatically create a journal entry or add activity to that account. For reuse, download the chart CSV and keep a copy.</div></div>
+{% endblock %}

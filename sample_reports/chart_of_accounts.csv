@@ -1,0 +1,37 @@
+﻿account,category,normal_balance_side
+Cash,Asset,Debit
+Bank - SBI,Asset,Debit
+Bank - HDFC,Asset,Debit
+Accounts Receivable,Asset,Debit
+Inventory,Asset,Debit
+Prepaid Insurance,Asset,Debit
+GST Input Credit,Asset,Debit
+Loans Given,Asset,Debit
+Furniture & Fixtures,Fixed Asset,Debit
+Computer Equipment,Fixed Asset,Debit
+Delivery Vehicle,Fixed Asset,Debit
+Accumulated Depreciation - Furniture,Contra Asset,Credit
+Accumulated Depreciation - Computers,Contra Asset,Credit
+Accumulated Depreciation - Vehicle,Contra Asset,Credit
+Accounts Payable,Liability,Credit
+Salaries Payable,Liability,Credit
+GST Output Payable,Liability,Credit
+Bank Loan Payable,Liability,Credit
+Owner's Capital,Equity,Credit
+Product Sales,Income,Credit
+Service Revenue,Income,Credit
+Interest Income,Income,Credit
+Other Income,Income,Credit
+Cost of Goods Sold,Expense,Debit
+Salaries Expense,Expense,Debit
+Rent Expense,Expense,Debit
+Utilities Expense,Expense,Debit
+Internet Expense,Expense,Debit
+Advertising Expense,Expense,Debit
+Insurance Expense,Expense,Debit
+Depreciation Expense,Expense,Debit
+Delivery Expense,Expense,Debit
+Repairs & Maintenance Expense,Expense,Debit
+Bank Charges Expense,Expense,Debit
+Interest Expense,Expense,Debit
+Office Supplies Expense,Expense,Debit

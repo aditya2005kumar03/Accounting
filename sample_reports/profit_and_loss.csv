@@ -1,0 +1,21 @@
+﻿section,account,amount
+Income,Product Sales,490000.00
+Income,Service Revenue,150000.00
+Income,Interest Income,2000.00
+Income,Other Income,2000.00
+Total income,,644000.00
+Expenses,Cost of Goods Sold,294000.00
+Expenses,Salaries Expense,143000.00
+Expenses,Rent Expense,15000.00
+Expenses,Utilities Expense,9200.00
+Expenses,Internet Expense,5800.00
+Expenses,Advertising Expense,19000.00
+Expenses,Insurance Expense,8000.00
+Expenses,Depreciation Expense,78000.00
+Expenses,Delivery Expense,2500.00
+Expenses,Repairs & Maintenance Expense,5300.00
+Expenses,Bank Charges Expense,650.00
+Expenses,Interest Expense,3900.00
+Expenses,Office Supplies Expense,8000.00
+Total expenses,,592350.00
+Net profit / (loss),,51650.00
