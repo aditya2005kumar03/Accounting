@@ -237,6 +237,11 @@ def inject_globals():
     }
 
 
+@app.route("/health")
+def health():
+    return "ok", 200
+
+
 @app.route("/")
 def dashboard():
     ws, reports, checks = get_data()
